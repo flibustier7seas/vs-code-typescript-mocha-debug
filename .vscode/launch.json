@@ -1,0 +1,24 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Debug Mocha Test",
+            "type": "node",
+            "request": "launch",
+            "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
+            "stopOnEntry": false,
+            "args": [
+                "${workspaceRoot}/test/build/test/**/*.spec.js"
+            ],
+            "address": "localhost",
+            "port": 5858,
+            "cwd": "${workspaceRoot}",
+            "sourceMaps": true,
+            "outFiles": [
+                "${workspaceRoot}/test/build/test/**/*.spec.js",
+            ],
+            "preLaunchTask": "npm: start",
+            "trace": true
+        }
+    ]
+}

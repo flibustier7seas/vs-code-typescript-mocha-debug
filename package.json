@@ -1,0 +1,17 @@
+{
+  "name": "mocha_debug_test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "tsc --project ./test --sourcemap",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/mocha": "^2.2.43",
+    "mocha": "^2.5.3",
+    "typescript": "^2.5.3"
+  }
+}
