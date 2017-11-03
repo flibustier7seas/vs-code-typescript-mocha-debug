@@ -2,9 +2,16 @@
     "version": "2.0.0",
     "tasks": [
         {
+            "taskName": "build_test",
+            "type": "shell",
+            "command": "npm run tsc -- --project ./test --sourcemap",
+            "group": "build"
+        },
+        {
             "type": "typescript",
-            "label": "build_typescript",
-            "tsconfig": "tsconfig.json",
+            "label": "build_test_watch",
+            "tsconfig": "test\\tsconfig.json",
+            "option": "watch",
             "problemMatcher": [
                 "$tsc-watch"
             ],

@@ -1,6 +1,10 @@
 {
     "compilerOptions": {
         "target": "es5",
+        "module": "commonjs",
+
+        "lib": ["es6"],
+
         "declaration": false,
         "noImplicitAny": false,
         "removeComments": true,
@@ -11,11 +15,13 @@
         "sourceMap": true,
         // module resolution
         "baseUrl": "../src/",
+        "paths": {
+            "src/*": ["*"]
+        },
         "moduleResolution": "node",
         "traceResolution": false,
-        "forceConsistentCasingInFileNames": false,
-        // module processing
-        "module": "es2015"
+        "forceConsistentCasingInFileNames": false
+
     },
     "exclude": [
         "node_modules"

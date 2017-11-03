@@ -8,16 +8,11 @@
             "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
             "stopOnEntry": false,
             "args": [
-                "${workspaceRoot}/test/build/test/**/*.spec.js"
+                "--require", "test/settings/bootstrap.js", "test/**/*.ts"
             ],
-            "address": "localhost",
-            "port": 5858,
             "cwd": "${workspaceRoot}",
-            "sourceMaps": true,
-            "outFiles": [
-                "${workspaceRoot}/test/build/test/**/*.spec.js",
-            ],
-            "preLaunchTask": "npm: start",
+            "protocol": "inspector",
+            "internalConsoleOptions": "openOnSessionStart",
             "trace": true
         }
     ]
