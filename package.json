@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "tsc": "tsc",
-    "start": "tsc --sourcemap",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "run_mocha": "mocha --require test/tshook.js test/**/*.ts",
-    "build_test": "tsc --project ./test --sourcemap"
+    "mocha-ts": "mocha --require test/settings/tsconfig-paths.js --require test/settings/tsNode.js test/**/*.ts",
+    "premocha-js": "tsc --project ./test --sourcemap",
+    "mocha-js": "mocha --require test/settings/tsconfig-paths.js test/build/**/*.js"
   },
   "author": "",
   "license": "ISC",

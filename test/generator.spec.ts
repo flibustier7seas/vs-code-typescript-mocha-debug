@@ -1,7 +1,7 @@
 import generator from "generator";
 
 describe("generator", function() {
-    it("is a sample", () => {
+    it("is a generator test", () => {
         let result = generator();
         result.next();
         result.next();
