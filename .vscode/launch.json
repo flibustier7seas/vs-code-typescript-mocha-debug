@@ -2,26 +2,26 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "name": "Debug Mocha Test (ts node)",
+            "name": "Debug Mocha Test (ts-node)",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
             "stopOnEntry": false,
             "args": [
-                "--opts", "test/settings/mocha.ts-node.opts"
+                "--opts", "test/settings.ts-node/mocha.opts"
             ],
             "cwd": "${workspaceRoot}",
             "protocol": "inspector",
             "internalConsoleOptions": "openOnSessionStart"
         },
         {
-            "name": "Debug Mocha Test (transpiled JavaScript file)",
+            "name": "Debug Mocha Test (transpiled-code)",
             "type": "node",
             "request": "launch",
             "program": "${workspaceRoot}/node_modules/mocha/bin/_mocha",
             "stopOnEntry": false,
             "args": [
-                "--opts", "test/settings/mocha.transpiled-code.opts"
+                "--opts", "test/settings.transpiled-code/mocha.opts"
             ],
             "address": "localhost",
             "port": 5858,
@@ -29,7 +29,8 @@
             "sourceMaps": true,
             "outFiles": [
                 "${workspaceRoot}/test/build/test/**/*.js"
-            ]
+            ],
+            "preLaunchTask": "build_test_watch_npm"
         }
     ]
 }

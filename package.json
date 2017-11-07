@@ -6,9 +6,13 @@
   "scripts": {
     "tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "mocha-ts": "mocha --require test/settings/tsconfig-paths.js --require test/settings/tsNode.js test/**/*.ts",
-    "premocha-js": "tsc --project ./test --sourcemap",
-    "mocha-js": "mocha --require test/settings/tsconfig-paths.js test/build/**/*.js"
+
+    "test:build:watch": "tsc --project ./test --sourcemap --watch",
+
+    "pretest:js": "tsc --project ./test --sourcemap",
+    "test:js": "mocha --opts test/settings.transpiled-code/mocha.opts",
+
+    "test:ts": "mocha --opts test/settings.ts-node/mocha.opts"
   },
   "author": "",
   "license": "ISC",

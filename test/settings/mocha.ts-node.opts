@@ -1,3 +1,0 @@
---require test/settings/tsconfig-paths.ts-node.js
---require test/settings/tsNode.js
-test/**/*.spec.ts

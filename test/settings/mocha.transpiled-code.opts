@@ -1,2 +1,0 @@
---require test/settings/tsconfig-paths.transpiled-code.js
-test/**/*.spec.js
