@@ -9,10 +9,10 @@ const jsonConfigPath = path.resolve(testDirectory, 'tsconfig.json')
 
 const tsConfig = json.parse(fs.readFileSync(jsonConfigPath).toString());
 
-const baseUrl = path.resolve(testDirectory, tsConfig.compilerOptions.outDir, "./test/", tsConfig.compilerOptions.baseUrl); // test/build/src
+const baseUrl = path.resolve(testDirectory, tsConfig.compilerOptions.outDir, "./test/", tsConfig.compilerOptions.baseUrl);
 
 tsConfigPaths.register({
-    baseUrl,
+    baseUrl, // ./test/build/src
     paths: Object.assign({},
         (tsConfig.compilerOptions.paths || {})
     ),

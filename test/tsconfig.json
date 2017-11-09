@@ -1,29 +1,18 @@
 {
+    "extends": "../tsconfig",
     "compilerOptions": {
-        "target": "es5",
+        "target": "es6",
         "module": "commonjs",
 
-        "lib": ["es6"],
+        // require for configurate tsconfig-paths
+        "outDir": "build",
+        "baseUrl": "../src",
 
-        "declaration": false,
-        "noImplicitAny": false,
-        "removeComments": true,
-        "noLib": false,
-        "preserveConstEnums": true,
-        "suppressImplicitAnyIndexErrors": true,
-        "outDir": "build/",
-        "sourceMap": true,
-        // module resolution
-        "baseUrl": "../src/",
+        //override paths
         "paths": {
-            "src/*": ["*"]
-        },
-        "moduleResolution": "node",
-        "traceResolution": false,
-        "forceConsistentCasingInFileNames": false
-
-    },
-    "exclude": [
-        "node_modules"
-    ]
+            "src/*": [
+                "*"
+            ]
+        }
+    }
 }

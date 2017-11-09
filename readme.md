@@ -1,3 +1,1 @@
-## tsconfig-paths
-
-- Запустить задачу сборки Ctrl+Shift+B;
+# VS Code debug mocha tests written in TypeScript

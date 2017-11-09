@@ -4,20 +4,21 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "tsc": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1",
-
-    "test:build:watch": "tsc --project ./test --sourcemap --watch",
+    "test": "mocha --opts test/settings.ts-node/mocha.opts",
+    "test:ts": "mocha --opts test/settings.ts-node/mocha.opts",
 
     "pretest:js": "tsc --project ./test --sourcemap",
     "test:js": "mocha --opts test/settings.transpiled-code/mocha.opts",
 
-    "test:ts": "mocha --opts test/settings.ts-node/mocha.opts"
+    "tsc": "tsc",
+    "test:build:watch": "tsc --project ./test --sourcemap --watch"
   },
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@types/chai": "^4.0.4",
     "@types/mocha": "^2.2.43",
+    "chai": "^4.1.2",
     "comment-json": "^1.1.3",
     "mocha": "^2.5.3",
     "ts-node": "^3.3.0",
