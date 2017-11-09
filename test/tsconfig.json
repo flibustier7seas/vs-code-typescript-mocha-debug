@@ -1,7 +1,7 @@
 {
     "extends": "../tsconfig",
     "compilerOptions": {
-        "target": "es6",
+        "target": "es6", //Node.JS 6+ support ES6
         "module": "commonjs",
 
         // require for configurate tsconfig-paths

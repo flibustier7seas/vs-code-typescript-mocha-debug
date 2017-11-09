@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "mocha --opts test/settings.ts-node/mocha.opts",
+
     "test:ts": "mocha --opts test/settings.ts-node/mocha.opts",
+    "test:ts:watch": "mocha --opts test/settings.ts-node/mocha.opts --watch",
 
     "pretest:js": "tsc --project ./test --sourcemap",
     "test:js": "mocha --opts test/settings.transpiled-code/mocha.opts",
