@@ -1,21 +1,26 @@
 {
     "compilerOptions": {
-        "target": "es5",
+        "target": "es2015",
+        "module": "es2015",
+
+        "lib": ["es6"],
+
         "declaration": false,
         "noImplicitAny": false,
         "removeComments": true,
         "noLib": false,
         "preserveConstEnums": true,
         "suppressImplicitAnyIndexErrors": true,
+
         "outDir": "build/",
         "sourceMap": true,
+
         // module resolution
         "baseUrl": "./src/",
         "moduleResolution": "node",
         "traceResolution": false,
-        "forceConsistentCasingInFileNames": false,
-        // module processing
-        "module": "es2015"
+        "forceConsistentCasingInFileNames": false
+
     },
     "exclude": [
         "node_modules"
